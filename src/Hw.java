@@ -1,6 +1,7 @@
 public class Hw {
     public static void main(String[] args) {
-        int[][] matrix = new int[5][5];
+        int size = 11;
+        int[][] matrix = new int[size][size];
         // matrix //
         for (int i = 0; i < matrix.length; i++) {
             System.out.print("[ ");
