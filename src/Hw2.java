@@ -89,13 +89,13 @@ public class Hw2 {
 
         // 219 //
         int k = 3;
-        int kMCount = 0;
-        for (int i : arr) {
+        int kIndexMCount = 0;
+        for (int i = 0; i < arr.length; i++) {
             if (i % k == 0) {
-                kMCount++;
+                kIndexMCount++;
             }
         }
-        System.out.println(kMCount);
+        System.out.println(kIndexMCount);
 
         // 220 //
         int nCount = 0, pCount = 0;
