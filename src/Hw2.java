@@ -1,6 +1,6 @@
 public class Hw2 {
     public static void main(String[] args) {
-        int[] arr = {12, 51, -7, 8, 2, -4, 4};
+        int[] arr = {-12, 51, -7, 8, 2, -4, 4};
         // 211 //
         double pSum = 0;
         int countOfP = 0;
@@ -106,30 +106,30 @@ public class Hw2 {
                 nCount++;
             }
         }
-        System.out.println("-:" + nCount + " +:" + pCount);
+        System.out.println("negative number count => " + nCount + ";\npositive number count => " + pCount + ";");
 
         // 221 //
-        int a = 1;
+        int a = -5;
         int b = 8;
         int c = 7;
         int d = 15;
-        int rangeSum1 = 0;
-        for (int i :
-                arr) {
-            if (i >= a && i < b) {
-                rangeSum1 += i;
+
+        int rangeSum = 0;
+        for (int i : arr) {
+            if (i >= a && i <= b) {
+                rangeSum += i;
             }
         }
-        System.out.println(rangeSum1);
+        System.out.println(rangeSum);
 
         // 222 //
-        int rangeSum2 = 0;
+        int rangeProd = 0;
         for (int i : arr) {
             if (i >= c && i < d) {
-                rangeSum2 += i;
+                rangeProd += i;
             }
         }
-        System.out.println(rangeSum2);
+        System.out.println(rangeProd);
 
         // 223 //
         int rangeCount = 0;
@@ -211,7 +211,7 @@ public class Hw2 {
         // 229 //
         int iMVPosProd = 1;
         for (int i = 0; i < arr.length; i++) {
-            if (i - arr[i] > 0) {
+            if (arr[i] - i >= 0) {
                 iMVPosProd *= arr[i];
             }
         }
