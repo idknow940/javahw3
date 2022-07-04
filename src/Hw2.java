@@ -46,34 +46,34 @@ public class Hw2 {
         System.out.println(nSMean);
 
         // 215 //
-        int eNSUM = 0;
+        int eNSum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                eNSUM += arr[i];
+                eNSum += arr[i];
             }
         }
-        System.out.println(eNSUM);
+        System.out.println(eNSum);
 
         // 216 //
-        int eNPROD = 1;
+        int eNProd = 1;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                eNPROD *= arr[i];
+                eNProd *= arr[i];
             }
         }
-        System.out.println(eNPROD);
+        System.out.println(eNProd);
 
         // 217 //
-        int oNSSUM = 0;
+        int oNSSum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 >= 0) {
-                oNSSUM += arr[i] * arr[i];
+                oNSSum += arr[i] * arr[i];
             }
         }
-        System.out.println(oNSSUM);
+        System.out.println(oNSSum);
 
         // 218 //
-        int oNASUM = 0;
+        int oNASum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 >= 0) {
                 int tempAbs;
@@ -82,10 +82,10 @@ public class Hw2 {
                 } else {
                     tempAbs = arr[i];
                 }
-                oNASUM += tempAbs;
+                oNASum += tempAbs;
             }
         }
-        System.out.println(oNASUM);
+        System.out.println(oNASum);
 
         // 219 //
         int k = 3;
