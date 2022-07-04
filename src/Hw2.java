@@ -1,6 +1,6 @@
 public class Hw2 {
     public static void main(String[] args) {
-        int[] arr = {12, 51, -6, 8, 2, -2, 4};
+        int[] arr = {12, 51, -7, 8, 2, -4, 4};
         // 211 //
         double pSum = 0;
         int countOfP = 0;
@@ -46,46 +46,46 @@ public class Hw2 {
         System.out.println(nSMean);
 
         // 215 //
-        int eNSum = 0;
+        int evenIndexNSum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                eNSum += arr[i];
+                evenIndexNSum += arr[i];
             }
         }
-        System.out.println(eNSum);
+        System.out.println(evenIndexNSum);
 
         // 216 //
-        int eNProd = 1;
+        int evenIndexNProd = 1;
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                eNProd *= arr[i];
+                evenIndexNProd *= arr[i];
             }
         }
-        System.out.println(eNProd);
+        System.out.println(evenIndexNProd);
 
         // 217 //
-        int oNSSum = 0;
+        int oddIndexNSSum = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (i % 2 >= 0) {
-                oNSSum += arr[i] * arr[i];
+            if (i % 2 > 0) {
+                oddIndexNSSum += arr[i] * arr[i];
             }
         }
-        System.out.println(oNSSum);
+        System.out.println(oddIndexNSSum);
 
         // 218 //
-        int oNASum = 0;
+        int oddIndexNASum = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (i % 2 >= 0) {
+            if (i % 2 > 0) {
                 int tempAbs;
                 if (arr[i] < 0) {
                     tempAbs = -arr[i];
                 } else {
                     tempAbs = arr[i];
                 }
-                oNASum += tempAbs;
+                oddIndexNASum += tempAbs;
             }
         }
-        System.out.println(oNASum);
+        System.out.println(oddIndexNASum);
 
         // 219 //
         int k = 3;
@@ -98,17 +98,15 @@ public class Hw2 {
         System.out.println(kMCount);
 
         // 220 //
-        int nCount = 0, pCount = 0, zCount = 0;
+        int nCount = 0, pCount = 0;
         for (int i : arr) {
             if (i < 0) {
                 nCount++;
-            } else if (i == 0) {
-                zCount++;
             } else {
                 pCount++;
             }
         }
-        System.out.println("-:" + nCount + " +:" + pCount + " 0:" + zCount);
+        System.out.println("-:" + nCount + " +:" + pCount);
 
         // 221 //
         int a = 1;
@@ -145,7 +143,7 @@ public class Hw2 {
         // 224 //
         int kASSum = 0;
         for (int i : arr) {
-            int tempAbs = 0;
+            int tempAbs;
             if (i < 0) {
                 tempAbs = -i;
             } else {
@@ -161,7 +159,7 @@ public class Hw2 {
         int t = 10;
         int tASProd = 1;
         for (int i : arr) {
-            int tempAbs = 0;
+            int tempAbs;
             if (i < 0) {
                 tempAbs = -i;
             } else {
@@ -176,7 +174,7 @@ public class Hw2 {
         // 226 //
         int kASCount = 0;
         for (int i : arr) {
-            int tempAbs = 0;
+            int tempAbs;
             if (i < 0) {
                 tempAbs = -i;
             } else {
@@ -213,7 +211,7 @@ public class Hw2 {
         // 229 //
         int iMVPosProd = 1;
         for (int i = 0; i < arr.length; i++) {
-            if (i - arr[i] > 0){
+            if (i - arr[i] > 0) {
                 iMVPosProd *= arr[i];
             }
         }
@@ -223,10 +221,10 @@ public class Hw2 {
         double kMESMean;
         double kMESMeanProd = 1;
         int kMESCount = 0;
-        for (int i: arr) {
-            if (i % k == 0){
-               kMESMeanProd *= i;
-               kMESCount++;
+        for (int i : arr) {
+            if (i % k == 0) {
+                kMESMeanProd *= i;
+                kMESCount++;
             }
         }
         kMESMean = kMESMeanProd / kMESCount;
