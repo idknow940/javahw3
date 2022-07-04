@@ -3,22 +3,28 @@ public class Hw2 {
         int[] arr = {12, 51, -6, 8, 2, -2, 4};
         // 211 //
         double pSum = 0;
+        int countOfP = 0;
         for (int i : arr) {
             if (i >= 0) {
                 pSum += i;
+                countOfP++;
             }
         }
-        double pAMean = pSum / arr.length;
+        double pAMean = pSum / countOfP;
         System.out.println(pAMean);
+
         // 214 //
         double nSum = 0;
+        int countOfN = 0;
         for (int i : arr) {
             if (i <= 0) {
                 nSum += i;
+                countOfN++;
             }
         }
-        double nAMean = nSum / arr.length;
+        double nAMean = nSum / countOfN;
         System.out.println(nAMean);
+
         // 212 //
         double pSMean = 1;
         for (int i : arr) {
@@ -26,8 +32,9 @@ public class Hw2 {
                 pSMean *= i;
             }
         }
-        pSMean /= arr.length;
+        pSMean /= countOfP;
         System.out.println(pSMean);
+
         // 213 //
         double nSMean = 1;
         for (int i : arr) {
@@ -35,7 +42,7 @@ public class Hw2 {
                 nSMean *= i;
             }
         }
-        nSMean /= arr.length;
+        nSMean /= countOfN;
         System.out.println(nSMean);
 
         // 215 //
@@ -79,8 +86,9 @@ public class Hw2 {
             }
         }
         System.out.println(oNASUM);
+
         // 219 //
-        int k = 7;
+        int k = 3;
         int kMCount = 0;
         for (int i : arr) {
             if (i % k == 0) {
@@ -88,6 +96,7 @@ public class Hw2 {
             }
         }
         System.out.println(kMCount);
+
         // 220 //
         int nCount = 0, pCount = 0, zCount = 0;
         for (int i : arr) {
@@ -182,12 +191,14 @@ public class Hw2 {
         // 227 //
         double kIMAMean;
         double kIMAMeanSum = 0;
+        int kIMAMCount = 0;
         for (int i = 0; i < arr.length; i++) {
             if (i % k == 0) {
                 kIMAMeanSum += arr[i];
+                kIMAMCount++;
             }
         }
-        kIMAMean = kIMAMeanSum / arr.length;
+        kIMAMean = kIMAMeanSum / kIMAMCount;
         System.out.println(kIMAMean);
 
         // 228 //
@@ -209,14 +220,16 @@ public class Hw2 {
         System.out.println(iMVPosProd);
 
         // 230 //
-        double kMESMean = 0;
+        double kMESMean;
         double kMESMeanProd = 1;
+        int kMESCount = 0;
         for (int i: arr) {
             if (i % k == 0){
                kMESMeanProd *= i;
+               kMESCount++;
             }
         }
-        kMESMean = kMESMeanProd / arr.length;
+        kMESMean = kMESMeanProd / kMESCount;
         System.out.println(kMESMean);
     }
 }
